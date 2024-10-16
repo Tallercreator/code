@@ -1,0 +1,12 @@
+<% content_for :title, "Editing commentpost" %>
+
+<h1>Editing commentpost</h1>
+
+<%= render "form", commentpost: @commentpost %>
+
+<br>
+
+<div>
+  <%= link_to "Show this commentpost", @commentpost %> |
+  <%= link_to "Back to commentposts", commentposts_path %>
+</div>

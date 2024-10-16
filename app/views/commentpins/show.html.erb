@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @commentpin %>
+
+<div>
+  <%= link_to "Edit this commentpin", edit_commentpin_path(@commentpin) %> |
+  <%= link_to "Back to commentpins", commentpins_path %>
+
+  <%= button_to "Destroy this commentpin", @commentpin, method: :delete %>
+</div>

@@ -1,6 +1,6 @@
-<h2>Add a comment:</h2>
+<h2>Add a comment</h2>
 
-<%= form_for([@post, @post.comments.build]) do |f| %>
+<%= form_for([@post, @post.Comments.build]) do |f| %>
   <div class="field">
     <%= f.label :commenter %><br />
     <%= f.text_field :commenter %>

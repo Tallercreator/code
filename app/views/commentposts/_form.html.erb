@@ -1,0 +1,27 @@
+<%= form_with(model: commentpost) do |form| %>
+  <% if commentpost.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(commentpost.errors.count, "error") %> prohibited this commentpost from being saved:</h2>
+
+      <ul>
+        <% commentpost.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

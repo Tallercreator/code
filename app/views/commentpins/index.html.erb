@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Commentpins" %>
+
+<h1>Commentpins</h1>
+
+<div id="commentpins">
+  <% @commentpins.each do |commentpin| %>
+    <%= render commentpin %>
+    <p>
+      <%= link_to "Show this commentpin", commentpin %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New commentpin", new_commentpin_path %>
