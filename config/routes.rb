@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   #resources :pins
-  resources :articles
+  resources :articles do
    root "articles#index"
 end
 
   resources :posts do
    resources :comments
 end
-  resources :pins do
-    resources :commentpins
+#   resources :pins do
+#     resources :comment_pins
 
-end
+ end
